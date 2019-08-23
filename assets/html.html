@@ -1,0 +1,105 @@
+<div class="modal fade" v-bind:id="index" tabindex="-1" role="dialog" v-for="custlist in custlists">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h3 class="modal-title mt-0 text-center">Edit The Content</h3> 
+                    <p class="text-center">Edit the details of the Customer</p>
+                </div>  
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">person</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" v-model="custlist.name"  placeholder="Your Name">
+                      </div>
+                    </div>
+  
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">email</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" v-model="custlist.email" placeholder="Your E-Mail">
+                      </div>
+                    </div>
+  
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">phone</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Your Phone No" v-model="custlist.phoneno" >
+                      </div>
+                    </div>
+  
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">group</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Date of Join" v-model="custlist.dateofjoin">
+                      </div>
+                    </div>
+  
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">web</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Address" v-model="custlist.address">
+                      </div>
+                    </div>
+  
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">phone</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Customer id">
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="row pl-1" id="otp" style="display: none">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="fas fa-info-circle"></i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter the OTP sent to your number"><button class="btn btn-secondary btn-sm">resend OTP</button><button class="btn btn-success btn-sm">Verify OTP</button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-link btn-success">submit</button>
+              <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div> 

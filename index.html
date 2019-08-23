@@ -1,0 +1,2103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<!-- vue js cdn -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  
+
+<!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">    -->
+
+
+  
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<!--     Fonts and icons     -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<!-- Material Kit CSS -->
+<link href="assets/css/material-kit.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+
+
+
+</head>
+<body>
+
+ 
+
+  
+    
+   
+    
+    
+
+      
+
+
+        <nav class="navbar   fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+                <div class="container">
+                    <div class="navbar-translate">
+                    <a class="navbar-brand" href="http://boxigo.in/">Boxigo</a>
+                  
+                  </div>
+                
+                  <div class="">
+
+                    <ul class="navbar-nav ml-auto">
+
+                      <li class="nav-item">
+                            <div class="dropdown d-flex justify-content-center">
+                                   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"                                  aria-expanded="false">
+                                     User
+                                   </a>
+
+                                   <div class="dropdown-menu "   aria-labelledby="dropdownMenuLink">
+
+                                       <form action="file:///C:/Users/Premium/Desktop/boxigo_admin_portal/login.html">
+                                        <button type="submit" class="nav1">
+                                            <i class="fas fa-unlock-alt"></i> &nbsp;Password Change
+                                        </button>
+                                    </form>
+
+                                   <form action="file:///C:/Users/Premium/Desktop/boxigo_admin_portal/login.html">
+                                        <button type="submit" class="nav1">
+                                            <i class="fas fa-user-check"></i>&nbsp; &nbsp;Logout
+                                        </button>
+                                    </form>
+
+                                    
+                                     
+                                   </div>
+                            </div>
+
+                                   
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+        <div class="row maintabs justify-content-center" >
+            <div class="col-lg-3" >
+                    <div class="col-lg-12">
+                            <div class="card px-0">
+                                <div class="card-body px-0 sidebarboundary" >
+                                    <ul class="list-group" id="myDIV" >
+                                      <br>
+                                        <li class="list-group-item  align-items-center buttonmain1" >
+                                          
+                                            <button class="buttonmain btn active"  onclick="but1();"><i class="fas fa-chart-bar"></i>DashBoard</button>
+                                            <!-- <span class="badge badge-primary badge-pill">14</span> -->
+                                        </li>
+                                        <li class="list-group-item  align-items-center buttonmain1 ">
+                                            <button class="buttonmain btn" onclick="but2();"><i class="fas fa-users"></i>customer details</button>
+                                            <!-- <span class="badge badge-primary badge-pill">14</span> -->
+                                        </li>
+                                        <li class="list-group-item  align-items-center buttonmain1">
+                                            <button class="buttonmain btn" onclick="but3();"><i class="fas fa-user-tie"></i> Existing Vendor Details</button>
+                                        </li>
+                                        <li class="list-group-item  align-items-center buttonmain1">
+                                            <button class="buttonmain btn" onclick="but4();"><i class="fas fa-user-clock"></i> new vendors request</button>
+                                        </li>
+                                        <li class="list-group-item  align-items-center buttonmain1">
+                                            <button class="buttonmain btn" onclick="but5();"><i class="fas fa-th-list"></i> Service type</button>
+                                        </li>
+
+                                        <li class="list-group-item  align-items-center buttonmain1">
+                                          <button class="buttonmain btn" onclick="but6();"><i class="fas fa-shopping-cart"></i> Items Info</button>
+                                      </li>
+                                        
+                                        <li class="list-group-item  align-items-center buttonmain1">
+                                            <button onclick="but7()" class="buttonmain btn" ><i class="fas fa-chart-line"></i> Estimate quotes</button>
+                                           
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
+
+            <div class="col-lg-8"  id="drop" >
+
+              <div id="itemsinfo">
+
+                  <div class="row">
+                      <div class="col-lg-12" >
+                          <div class="card">
+                             <div class="card-header d-flex justify-content-center">
+                                    <p class="card-title my-0 ">New Vendor details</p>
+                                  </div>
+                              <div class="card-body d-flex justify-content-center">
+                                 
+                                  
+                                  <div id="myModal4" class="modal">
+  
+                                      <!-- Modal content -->
+                                      <div class="modal-content">
+                                        <div id="close4" class="close">&times;</div>
+                                        <div>
+                                            <form action="" method="POST" class="cardanimation">
+                                                <div class="row">
+                                                  <div class="col-md-8 justify-content-center">
+                                                      <div class="form-group">
+                                                        <div class="input-group">
+                                                          <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                              <i class="material-icons">person</i>
+                                                            </span>
+                                                          </div>
+                                                          <input type="text" name="name" class="form-control" value="" id="itemtype"  placeholder="Type">
+                                                        </div>
+                                                      </div>
+                                    
+                                                      <div class="form-group">
+                                                        <div class="input-group">
+                                                          <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                              <i class="material-icons">email</i>
+                                                            </span>
+                                                          </div>
+                                                          <input type="text" name="display_name" class="form-control" value="" id="itemcategory"  placeholder="Category">
+                                                        </div>
+                                                      </div>
+                                    
+                                                      <div class="form-group " >
+                                                        <div class="input-group">
+                                                          <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                              <i class="material-icons">phone</i>
+                                                            </span>
+                                                          </div> 
+                                                          <input type="text" name="service_info" class="form-control" value="" id="itemitems" placeholder="Items" >
+                                                        </div>
+                                                      </div>
+                                    
+                                                  </div>
+                                                  
+                                                </div>
+                                           
+                                                <div class="row ml-2 mt-2 d-flex justify-content-center">
+                                                  <div class="modal-footer ">
+                                                    <button type="button" class="btn btn-link btn-success" v-on:click="itemcreate();" >submit</button>
+                                                  </div>
+                                                </div>
+                                                
+                                              </form>
+                                        </div>
+                                        
+                                      </div>
+                                    
+                                    </div>
+                                
+                                
+
+                                    <div class="table-responsive">
+                                   
+                                   <table class="table table-responsive-md  tablefont" id="myTable8" >
+                                      <thead>
+                                        <tr>
+                                          <th  class="twentypxdown1 ">S.no</th>
+                                          <th  class="twentypxdown1 ">Type</th>
+                                          <th  class="twentypxdown1 ">Category</th>
+                                          <th  class="twentypxdown1 ">Items</th>
+                                          <th  class="twentypxdown1 ">Created date</th>
+                                          <th  class="twentypxdown1 ">Last Updated</th>
+                                          <th scope="col" class="twentypxdown1 " id="myBtn4"><i class="fas fa-user-plus"></i>Add</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody class="twentypxdown justify-content-between " >
+                                        
+                                        <tr v-for="(item,index) in items[0]" >
+                                          
+                                            <td v-if="id===index + 'item'" class="noborder"  colspan="7">
+                                                                    
+
+                                                <form action="" method="POST" class="cardanimation">
+                                                    <div class="row justify-content-center" >
+                                                      <div class="col-md-8">
+                                                          <div class="form-group">
+                                                            <div class="input-group">
+                                                              <div class="input-group-prepend">
+                                                                <span class="input-group-text">
+                                                                  <i class="material-icons">person</i>
+                                                                </span>
+                                                              </div>
+                                                              <input type="text"  class="form-control" v-model="item.type" placeholder="name">
+                                                            </div>
+                                                          </div>
+                                        
+                                                          <div class="form-group">
+                                                            <div class="input-group">
+                                                              <div class="input-group-prepend">
+                                                                <span class="input-group-text">
+                                                                  <i class="material-icons">email</i>
+                                                                </span>
+                                                              </div>
+                                                              <input type="text" class="form-control" v-model="item.category" placeholder="category">
+                                                            </div>
+                                                          </div>
+                                        
+                                                          <div class="form-group " >
+                                                            <div class="input-group">
+                                                              <div class="input-group-prepend">
+                                                                <span class="input-group-text">
+                                                                  <i class="material-icons">phone</i>
+                                                                </span>
+                                                              </div>
+                                                              <input type="text"  class="form-control" placeholder="Items" v-model="item.items">
+                                                            </div>
+                                                          </div>
+                                        
+                                                      </div>
+                                                      
+                                                    </div>
+                                               
+                                                    <div class="row ml-2 mt-2 d-flex justify-content-center">
+                                                      <div class="modal-footer ">
+                                                        <button type="button" class="btn btn-link btn-success" v-on:click="itemsubmit(item.id,item.type,item.category,item.items)" >submit</button>
+                                                        <button type="button" class="btn btn-danger btn-link" data-dismiss="modal" v-on:click="modelclose(index + 'item')">Close</button>
+                                                      </div>
+                                        
+                                                    </div>
+                                                    <div class="col-lg-12 d-flex justify-content-center" v-if=" onsubmit=='submitted' ">
+                                                      <p id="fail"  class="btn btn-link btn-success"> submitted successfully...! </p>
+                                                    </div>
+                                                  </form>
+
+
+                                               </td>
+                                          <td class="noborder " v-if="!(id===index + 'item')"> <p class="btn btn-success btn-raised btn-md tablefont1 indexnumber">{{index+1}}</p> </td>
+                                          <td class="noborder" v-if="!(id===index + 'item')">&nbsp;&nbsp;{{item.type}}&nbsp;&nbsp;</td>
+                                          <td class="noborder" v-if="!(id===index + 'item')"> &nbsp;&nbsp;{{item.category}}&nbsp;&nbsp;</td>
+                                          <td class="noborder" v-if="!(id===index + 'item')">{{item.items}}</td>
+                                          <td class="noborder" v-if="!(id===index + 'item')">{{item.created_date}}</td>
+                                          <td class="noborder" v-if="!(id===index + 'item')">{{item.last_update_date}}</td>
+                                          <td class="noborder" v-if="!(id===index + 'item')"><button data-toggle="modal"  v-on:click="modelopen(index + 'item')"  class="btn btn-success btn-raised btn-md tablefont1 crud">
+                                            <i class="fas fa-edit"></i>
+                                         </button>
+                                         <button data-toggle="modal"  v-on:click="itemdelete(item.id)"  class="btn btn-success btn-raised btn-md tablefont1 crud">
+                                          <i class="far fa-trash-alt"></i>
+                                       </button>
+                                        </td>   
+                                        </tr>
+
+                                      </tbody>
+                                    </table>
+                                  
+                                    </div>
+                               
+
+                                  
+                                </div>
+                          </div>
+                      </div> 
+                  </div>
+
+              </div>
+
+                <div id="servicetype">
+
+                    <div class="row">
+                        <div class="col-lg-12" >
+                            <div class="card">
+                               <div class="card-header d-flex justify-content-center">
+                                      <p class="card-title my-0 ">New Vendor details</p>
+                                    </div>
+                                <div class="card-body d-flex justify-content-center">
+                                   
+                                    
+                                    <div id="myModal" class="modal">
+    
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                          <div id="close" class="close">&times;</div>
+                                          <div>
+                                              <form action="" method="POST" class="cardanimation">
+                                                  <div class="row justify-content-center">
+                                                    <div class="col-md-8">
+                                                        <div class="form-group">
+                                                          <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                              <span class="input-group-text">
+                                                                <i class="material-icons">person</i>
+                                                              </span>
+                                                            </div>
+                                                            <input type="text"  class="form-control" value="" id="name"  placeholder="name">
+                                                          </div>
+                                                        </div>
+                                      
+                                                        <div class="form-group">
+                                                          <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                              <span class="input-group-text">
+                                                                <i class="material-icons">email</i>
+                                                              </span>
+                                                            </div>
+                                                            <input type="text"  class="form-control" value="" id="displayname"  placeholder="display_name">
+                                                          </div>
+                                                        </div>
+                                      
+                                                        <div class="form-group " >
+                                                          <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                              <span class="input-group-text">
+                                                                <i class="material-icons">phone</i>
+                                                              </span>
+                                                            </div> 
+                                                            <input type="text"  class="form-control" value="" id="serviceinfo" placeholder="service_info" >
+                                                          </div>
+                                                        </div>
+                                      
+                                                    </div>
+                                  
+                                                  </div>
+                                             
+                                                  <div class="row ml-2 mt-2 d-flex justify-content-center">
+                                                    <div class="modal-footer ">
+                                                      <button type="button" class="btn btn-link btn-success" v-on:click="servicecreate()" >submit</button>
+                                                    </div>
+                                                  </div>
+                                                </form>
+                                          </div>
+                                          
+                                        </div>
+                                      
+                                      </div>
+                                  
+                                  
+
+                                      <div class="table-responsive">
+                                     
+                                     <table class="table table-responsive-md  tablefont" id="myTable3">
+                                        <thead>
+                                          <tr>
+                                            <th  class="twentypxdown1 ">S.no</th>
+                                            <th  class="twentypxdown1 ">Service Name</th>
+                                            <th  class="twentypxdown1 ">Service Type</th>
+                                            <th  class="twentypxdown1 ">Service Info</th>
+                                            <th  class="twentypxdown1 ">Created date</th>
+                                            <th  class="twentypxdown1 ">Last Updated</th>
+                                            <th scope="col" class="twentypxdown1 " id="myBtn"><i class="fas fa-user-plus"></i>Add</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="twentypxdown justify-content-between " >
+                                          
+                                          <tr v-for="(servicelist,index) in servicelists[0]">
+                                            
+                                              <td v-if="id===index + 'service'" class="noborder"  colspan="7">
+                                                                      
+
+                                                  <form action="" method="POST" class="cardanimation">
+                                                      <div class="row justify-content-center">
+                                                        <div class="col-md-8">
+                                                            <div class="form-group">
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <P></P>
+                                                                  </span>
+                                                                </div>
+                                                                <input type="text" class="form-control" v-model="servicelist.name" placeholder="name">
+                                                              </div>
+                                                            </div>
+                                          
+                                                            <div class="form-group">
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="material-icons">email</i>
+                                                                  </span>
+                                                                </div>
+                                                                <input type="text"  class="form-control" v-model="servicelist.display_name" placeholder="display_name">
+                                                              </div>
+                                                            </div>
+                                          
+                                                            <div class="form-group " >
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="fas fa-phone-volume">&nbsp;Phone No:</i>
+                                                                  </span>
+                                                                </div>
+                                                                <input type="text"  class="form-control" placeholder="service_info" v-model="servicelist.service_info">
+                                                              </div>
+                                                            </div>
+                                          
+                                                        </div>
+                                                  
+                                                      </div>
+                                                 
+                                                      <div class="row ml-2 mt-2 d-flex justify-content-center">
+                                                        <div class="modal-footer ">
+                                                          <button type="button" class="btn btn-link btn-success" v-on:click="servicesubmit(servicelist.name,servicelist.display_name,servicelist.service_info,servicelist.created_date,servicelist.last_update_date,servicelist.id)">submit</button>
+                                                          <button type="button" class="btn btn-danger btn-link" data-dismiss="modal" v-on:click="modelclose(index + 'service')">Close</button>
+                                                        </div>
+                                          
+                                                      </div>
+                                                      <div class="col-lg-12 d-flex justify-content-center" v-if=" onsubmit=='submitted' ">
+                                                        <p id="fail"  class="btn btn-link btn-success"> submitted successfully...! </p>
+                                                      </div>
+                                                    </form>
+
+
+                                                 </td>
+                                            <td class="noborder " v-if="!(id===index + 'service')"> <p class="btn btn-success btn-raised btn-md tablefont1 indexnumber">{{index+1}}</p> </td>
+                                            <td class="noborder" v-if="!(id===index + 'service')">&nbsp;&nbsp;{{servicelist.name}}&nbsp;&nbsp;</td>
+                                            <td class="noborder" v-if="!(id===index + 'service')"> &nbsp;&nbsp;{{servicelist.display_name}}&nbsp;&nbsp;</td>
+                                            <td class="noborder" v-if="!(id===index + 'service')">
+                                             
+                                                  {{...servicelist.service_info}}
+                                              
+                                            </td>
+                                            <td class="noborder" v-if="!(id===index + 'service')">{{servicelist.created_date}}</td>
+                                            <td class="noborder" v-if="!(id===index + 'service')">{{servicelist.last_update_date}}</td>
+                                            <td class="noborder" v-if="!(id===index + 'service')"><button data-toggle="modal"  v-on:click="modelopen(index + 'service')"  class="btn btn-success btn-raised btn-md tablefont1 crud">
+                                              <i class="fas fa-edit"></i>
+                                           </button>
+                                           <button data-toggle="modal"  v-on:click="servicedelete(servicelist.id)"  class="btn btn-success btn-raised btn-md tablefont1 crud">
+                                            <i class="far fa-trash-alt"></i>
+                                         </button>
+                                          </td>   
+                                          </tr>
+
+                                        </tbody>
+                                      </table>
+                                    
+                                      </div>
+                                 
+
+                                    
+                                  </div>
+                            </div>
+                        </div> 
+                    </div>
+
+                </div>
+   
+                <div id="estimateinfo">
+                      <div class="row">
+                        <div class="col-lg-12 d-flex justify-content-center">
+                            <h3>Administration details</h3>
+                        </div>
+                    </div>
+                    <div class="card-deck mb-5">
+                            <div class="card">
+                                <div class="card-header"><p class="card-title my-0">Personal Info</p></div>
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <h4 class="title my-0">first name</h4>
+                                        <p class="my-0">email</p>
+                                        <p class="my-0">phone</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header"><p class="card-title my-0">Total Moves</p></div>
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <h1 class="title my-0">total</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header"><p class="card-title my-0">Quotations Received</p></div>
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <h1 class="title my-0">0</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-5">
+                            <div class="card-header">
+                                <p class="card-title my-0">Your Moves</p>
+                            </div>
+                            <div class="card-body">
+                                <div id="accordion">
+                               
+                                <div class="panel">
+                                    <div class="card-heading" >
+                                         ss
+                                    </div>
+                                    <div  class="collapse"  data-parent="#accordion">
+                                        <div class="card-body px-0">
+                                         cards
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="Customerinfo">
+                        <div class="row ">
+                            <div class="col-lg-12" >
+                                    <div class="card">
+                                      <div class="card-header d-flex justify-content-center">
+                                              <p class="card-title my-0 ">Customer details</p>
+                                            </div>
+                                        <div class="card-body d-flex justify-content-center">
+                                            
+                                          <div id="myModal2" class="modal">
+
+                                            <!-- Modal content -->
+                                            <div class="modal-content">
+                                              <div id="close2" class="close">&times;</div>
+                                              <div>
+                                                  <form action="" method="POST" class="cardanimation">
+                                                      <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="material-icons">person</i>
+                                                                  </span>
+                                                                </div>
+                                                                <input type="text" name="name" class="form-control" value="" id="name"  placeholder="name">
+                                                              </div>
+                                                            </div>
+                                          
+                                                            <div class="form-group">
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="material-icons">email</i>
+                                                                  </span>
+                                                                </div>
+                                                                <input type="text" name="display_name" class="form-control" value="" id="displayname"  placeholder="display_name">
+                                                              </div>
+                                                            </div>
+                                          
+                                                            <div class="form-group " >
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="material-icons">phone</i>
+                                                                  </span>
+                                                                </div> 
+                                                                <input type="text" name="service_info" class="form-control" value="" id="serviceinfo" placeholder="service_info" >
+                                                              </div>
+                                                            </div>
+                                          
+                                                        </div>
+                                                        <div class="col-md-6 ">
+                                                            <div class="form-group">
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="material-icons">group</i>
+                                                                  </span>
+                                                                </div>
+                                                                <input type="text" name="created_date" class="form-control" value="" id="createddate" placeholder="created_date" >
+                                                              </div>
+                                                            </div>
+                                          
+                                                            <div class="form-group">
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="material-icons">web</i>
+                                                                  </span>
+                                                                </div>
+                                                                <input type="text" name="last_update_date" class="form-control" value="" id="lastdate" placeholder="last_update_date" >
+                                                              </div>
+                                                            </div>
+                                                          
+                                          
+                                    
+                                                        </div>
+                                                      </div>
+                                                 
+                                                      <div class="row ml-2 mt-2 d-flex justify-content-center">
+                                                        <div class="modal-footer ">
+                                                          <button type="button" class="btn btn-link btn-success" v-on:click="servicecreate()" >submit</button>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-lg-12 d-flex justify-content-center" v-if=" onsubmit=='submitted' ">
+                                                        <p id="fail"  class="btn btn-link btn-success"> submitted successfully...! </p>
+                                                      </div>
+                                                    </form>
+                                              </div>
+                                              
+                                            </div>
+                                          
+                                          </div>
+                                   
+
+                                          <div class="table-responsive">
+                                             <table class="table table-responsive-lg  table-responsive-md tablefont justify-content-center" id="myTable2">
+                                                <thead>
+                                                  <tr>
+                                                      <th scope="col" class="twentypxdown1 " @click="sort('name')">S.no</th>
+                                                    <th scope="col" class="twentypxdown1 " @click="sort('name')">Fisrt Name</th>
+                                                    <th scope="col" class="twentypxdown1 " @click="sort('phoneno')">Last Name</th>
+                                                    <th scope="col" class="twentypxdown1 "  @click="sort('email')">email</th>
+                                                    <th scope="col" class="twentypxdown1 "  @click="sort('dateofjoin')">Phone Number</th>
+                                                    <th scope="col" class="twentypxdown1 "  @click="sort('address')">Date Of Join</th>
+                                                    <th scope="col" class="twentypxdown1 " id="myBtn2"><i class="fas fa-user-plus"></i>Add</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="twentypxdown justify-content-between "  >
+
+
+                                               
+
+                                                  <tr v-for="(custlist,index) in custlists[0]">
+                                                      <td v-if="id===index + 'customer'" class="noborder"  colspan="7">
+                                                                      
+
+                                                        <form action="" method="POST" class="cardanimation">
+                                                          <div class="row justify-content-center">
+                                                            <div class="col-md-8">
+                                                                <div class="form-group">
+                                                                  <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                      <span class="input-group-text">
+                                                                        <i class="fas fa-user">&nbsp;First Name:</i>
+                                                                      </span>
+                                                                    </div>
+                                                                    <input type="text"  class="form-control" v-model="custlist.first_name" placeholder="name">
+                                                                  </div>
+                                                                </div>
+                                              
+                                                            
+                                              
+                                                                <div class="form-group " >
+                                                                  <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                      <span class="input-group-text">
+                                                                        <i class="fas fa-user">&nbsp;Last Name:</i>
+                                                                      </span>
+                                                                    </div>
+                                                                    <input type="text"  class="form-control" placeholder="service_info" v-model="custlist.last_name">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                  <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                      <span class="input-group-text">
+                                                                        <i class="fas fa-envelope">&nbsp;Mail id:</i>
+                                                                      </span>
+                                                                    </div>
+                                                                    <input type="text"  class="form-control" placeholder="last_update_date" v-model="custlist.email">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                  <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                      <span class="input-group-text">
+                                                                        
+                                                                        <i class="fas fa-phone-volume">&nbsp;Phone No:</i>
+                                                                      </span>
+                                                                    </div>
+                                                                    <input type="text"  class="form-control" placeholder="last_update_date" v-model="custlist.phone">
+                                                                  </div>
+                                                                </div>
+                                                                
+                                              
+                                                            </div>
+                                                       
+                                                          </div>
+                                                     
+                                                          <div class="row ml-2 mt-2 d-flex justify-content-center">
+                                                            <div class="modal-footer ">
+                                                              <button type="button" class="btn btn-link btn-success" v-on:click="customersubmit(custlist.user_id,custlist.first_name,custlist.last_name,custlist.email,custlist.phone,custlist.verification_key,custlist.is_email_verified,custlist.is_phone_verified,custlist.date_created)">submit</button>
+                                                              <button type="button" class="btn btn-danger btn-link" data-dismiss="modal" v-on:click="modelclose(index + 'customer')">Close</button>
+                                                            </div>
+                                                            
+                                              
+                                                          </div>
+                                                          <div class="col-lg-12 d-flex justify-content-center" v-if=" onsubmit=='submitted' ">
+                                                            <p id="fail"  class="btn btn-link btn-success"> submitted successfully...! </p>
+                                                          </div>
+                                                        </form>
+
+
+                                                         </td>
+                                                         <td class="noborder " v-if="!(id===index + 'customer')"> <p class="btn btn-success btn-raised btn-md tablefont1 indexnumber">{{index+1}}</p> </td>
+                                                    <td class="noborder" v-if="!(id===index + 'customer')">{{custlist.first_name}}</td>
+                                                    <td class="noborder" v-if="!(id===index + 'customer')">{{custlist.last_name}}</td>
+                                                    <td class="noborder" v-if="!(id===index + 'customer')">{{custlist.email}}</td>
+                                                    <td class="noborder" v-if="!(id===index + 'customer')">{{custlist.phone}}</td>
+                                                    <td class="noborder" v-if="!(id===index + 'customer')">{{custlist.date_created}}</td>
+                                                    <td class="noborder" v-if="!(id===index + 'customer')"><button data-toggle="modal"  v-on:click="modelopen(index + 'customer')"  class="btn btn-success btn-raised btn-md tablefont1 crud">
+                                                      <i class="fas fa-edit"></i>
+                                                   </button>
+                                                   <button v-on:click="customerdelete(custlist.user_id)" class="btn btn-success btn-raised btn-md tablefont1 crud">
+                                                    <i class="far fa-trash-alt"></i>
+                                                   </button>
+                                                  </td>   
+                                                  </tr>
+                                                  
+                                                </tbody>
+                                              </table>
+                                          </div>    
+
+                                      
+                                                 </div>
+                                        
+                                          </div>
+                                      </div>
+                             </div> 
+                        </div>
+                
+                <div id="vendorinfo">
+    
+                             <div class="row">
+                                <div class="col-lg-12" >
+                                    <div class="card">
+                                       <div class="card-header d-flex justify-content-center">
+                                              <p class="card-title my-0 ">Vendor details</p>
+                                            </div>
+                                        <div class="card-body d-flex justify-content-center">
+                                           
+                                          <div id="myModal1" class="modal">
+
+                                            <!-- Modal content -->
+                                            <div class="modal-content">
+                                              <div id="close1" class="close">&times;</div>
+                                              <div>
+                                                  <form action="" method="POST" class="cardanimation">
+                                                      <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="material-icons">person</i>
+                                                                  </span>
+                                                                </div>
+                                                                <input type="text" name="name" class="form-control" value="" id="owner_name"  placeholder="name">
+                                                              </div>
+                                                            </div>
+                                          
+                                                            <div class="form-group">
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="material-icons">email</i>
+                                                                  </span>
+                                                                </div>
+                                                                <input type="text" name="display_name" class="form-control" value="" id="displayname"  placeholder="display_name">
+                                                              </div>
+                                                            </div>
+                                          
+                                                            <div class="form-group " >
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="material-icons">phone</i>
+                                                                  </span>
+                                                                </div> 
+                                                                <input type="text" name="service_info" class="form-control" value="" id="serviceinfo" placeholder="service_info" >
+                                                              </div>
+                                                            </div>
+                                          
+                                                        </div>
+                                                        <div class="col-md-6 ">
+                                                            <div class="form-group">
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="material-icons">group</i>
+                                                                  </span>
+                                                                </div>
+                                                                <input type="text" name="created_date" class="form-control" value="" id="createddate" placeholder="created_date" >
+                                                              </div>
+                                                            </div>
+                                          
+                                                            <div class="form-group">
+                                                              <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                  <span class="input-group-text">
+                                                                    <i class="material-icons">web</i>
+                                                                  </span>
+                                                                </div>
+                                                                <input type="text" name="last_update_date" class="form-control" value="" id="lastdate" placeholder="last_update_date" >
+                                                              </div>
+                                                            </div>
+                                                          
+                                          
+                                    
+                                                        </div>
+                                                      </div>
+                                                 
+                                                      <div class="row ml-2 mt-2 d-flex justify-content-center">
+                                                        <div class="modal-footer ">
+                                                          <button type="button" class="btn btn-link btn-success" v-on:click=" existingvendorcreate()" >submit</button>
+                                                        </div>
+                                                      </div>
+                                                    </form>
+                                              </div>
+                                              
+                                            </div>
+                                          
+                                          </div>
+                                         
+
+                                          <div class="table-responsive">
+                                              <table class="table table-responsive-lg  table-responsive-md tablefont" id="myTable1">
+                                                <thead>
+                                                  <tr>
+                                                      <th scope="col" class="twentypxdown1 " >S.no</th>
+                                                    <th scope="col" class="twentypxdown1 " >Name</th>
+                                                    <th scope="col" class="twentypxdown1 " >Email</th>
+                                                    <th scope="col" class="twentypxdown1 " >Phone Number</th>
+                                                    <th scope="col" class="twentypxdown1 " >Date Of Join</th>
+                                                    <th scope="col" class="twentypxdown1 " >Last Update</th>
+                                                    <th scope="col" class="twentypxdown1 " id="myBtn1"><i class="fas fa-user-plus"></i>Add</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="twentypxdown justify-content-between " >
+                                                  <tr v-for="(vendlist,index) in vendlists[0]">
+                                                      <td v-if="id===index + 'existingvendor'" class="noborder"  colspan="7">
+                                                                      
+
+                                                          <form action="" method="POST" class="cardanimation">
+                                                          <div class="row justify-content-center">
+                                                            <div class="col-md-8">
+                                                                <div class="form-group">
+                                                                  <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                      <span class="input-group-text">
+                                                                        <i class="fas fa-user">&nbsp;Name:</i>
+                                                                      </span>
+                                                                    </div>
+                                                                    <input type="text" name="name" class="form-control" v-model="vendlist.owner_name" placeholder="name">
+                                                                  </div>
+                                                                </div>
+                                              
+                                                            
+                                              
+                                                                <div class="form-group " >
+                                                                  <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                      <span class="input-group-text">
+                                                                        <i class="fas fa-envelope">&nbsp;Mail Id:</i>
+                                                                      </span>
+                                                                    </div>
+                                                                    <input type="text" name="email" class="form-control" placeholder="service_info" v-model="vendlist.owner_email">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                  <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                      <span class="input-group-text">
+                                                                        <i class="fas fa-phone-volume">&nbsp;Phone No:</i>
+                                                                      </span>
+                                                                    </div>
+                                                                    <input type="text" name="phone" class="form-control" placeholder="last_update_date" v-model="vendlist.owner_phone">
+                                                                  </div>
+                                                                </div>
+                                              
+                                                            </div>
+                              
+                                                          </div>
+                                                     
+                                                          <div class="row ml-2 mt-2 d-flex justify-content-center">
+                                                            <div class="modal-footer ">
+                                                              <button type="button" class="btn btn-link btn-success" v-on:click="existingvendorsubmit(vendlist.id,vendlist.business_name,vendlist.activation_date,vendlist.contact_address,vendlist.business_contact_no,vendlist.category,vendlist.merchant_status,vendlist.contract_status,vendlist.name_as_per_gst,vendlist.GSTIN_number,vendlist.registered_address,vendlist.owner_name,vendlist.owner_email,vendlist.owner_phone,vendlist.created_date,vendlist.last_update_date,vendlist.rate_card_detail)">submit</button>
+                                                              <button type="button" class="btn btn-danger btn-link" data-dismiss="modal" v-on:click="modelclose(index + 'existingvendor')">Close</button>
+                                                            </div>
+                                              
+                                                          </div>
+                                                          <div class="col-lg-12 d-flex justify-content-center" v-if=" onsubmit=='submitted' ">
+                                                            <p id="fail"  class="btn btn-link btn-success"> submitted successfully...! </p>
+                                                          </div>
+                                                        </form>
+
+
+                                                         </td>
+                                                         <td class="noborder " v-if="!(id===index + 'existingvendor')"> <p class="btn btn-success btn-raised btn-md tablefont1 indexnumber">{{index+1}}</p> </td>
+                                                    <td class="noborder" v-if="!(id===index + 'existingvendor')">{{vendlist.owner_name}}</td>
+                                                    <td class="noborder" v-if="!(id===index + 'existingvendor')">{{vendlist.owner_email}}</td>
+                                                    <td class="noborder" v-if="!(id===index + 'existingvendor')">{{vendlist.owner_phone}}</td>
+                                                    <td class="noborder" v-if="!(id===index + 'existingvendor')">{{vendlist.created_date}}</td>
+                                                    <td class="noborder" v-if="!(id===index + 'existingvendor')">{{vendlist.last_update_date}}</td>
+                                                    <td class="noborder" class="noborder" v-if="!(id===index + 'existingvendor')"><button  data-toggle="modal"   v-on:click="modelopen(index + 'existingvendor')"  class="btn btn-success btn-raised btn-md tablefont1 crud">
+                                                      <i class="fas fa-edit"></i>
+                                                   </button>
+                                                   <button data-toggle="modal"  v-on:click="existingvendordelete(vendlist.id)"  class="btn btn-success btn-raised btn-md tablefont1 crud">
+                                                    <i class="far fa-trash-alt"></i>
+                                                 </button>
+                                                   
+                                                  </td>   
+                                                  </tr>
+
+                                                </tbody>
+                                              </table>
+                                          </div>  
+                                            
+
+
+                                            
+                                          </div>
+        
+                                    </div>
+                                </div> 
+                            </div>
+                </div>
+                <div id="newvendorinfo" >
+                       
+                    <div class="row">
+                        <div class="col-lg-12" >
+                            <div class="card">
+                               <div class="card-header d-flex justify-content-center">
+                                      <p class="card-title my-0 ">Vendor details</p>
+                                    </div>
+                                <div class="card-body d-flex justify-content-center">
+                                   
+                                  <div id="myModal3" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                      <div id="close3" class="close">&times;</div>
+                                      <div>
+                                          <form action="" method="POST" class="cardanimation">
+                                              <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                      <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                          <span class="input-group-text">
+                                                            <i class="material-icons">person</i>
+                                                          </span>
+                                                        </div>
+                                                        <input type="text" name="name" class="form-control" value="" id="owner_name"  placeholder="name">
+                                                      </div>
+                                                    </div>
+                                  
+                                                    <div class="form-group">
+                                                      <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                          <span class="input-group-text">
+                                                            <i class="material-icons">email</i>
+                                                          </span>
+                                                        </div>
+                                                        <input type="text" name="display_name" class="form-control" value="" id="displayname"  placeholder="display_name">
+                                                      </div>
+                                                    </div>
+                                  
+                                                    <div class="form-group " >
+                                                      <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                          <span class="input-group-text">
+                                                            <i class="material-icons">phone</i>
+                                                          </span>
+                                                        </div> 
+                                                        <input type="text" name="service_info" class="form-control" value="" id="serviceinfo" placeholder="service_info" >
+                                                      </div>
+                                                    </div>
+                                  
+                                                </div>
+                                                <div class="col-md-6 ">
+                                                    <div class="form-group">
+                                                      <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                          <span class="input-group-text">
+                                                            <i class="material-icons">group</i>
+                                                          </span>
+                                                        </div>
+                                                        <input type="text" name="created_date" class="form-control" value="" id="createddate" placeholder="created_date" >
+                                                      </div>
+                                                    </div>
+                                  
+                                                    <div class="form-group">
+                                                      <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                          <span class="input-group-text">
+                                                            <i class="material-icons">web</i>
+                                                          </span>
+                                                        </div>
+                                                        <input type="text" name="last_update_date" class="form-control" value="" id="lastdate" placeholder="last_update_date" >
+                                                      </div>
+                                                    </div>
+                                                  
+                                  
+                            
+                                                </div>
+                                              </div>
+                                         
+                                              <div class="row ml-2 mt-2 d-flex justify-content-center">
+                                                <div class="modal-footer ">
+                                                  <button type="button" class="btn btn-link btn-success" v-on:click=" existingvendorcreate()" >submit</button>
+                                                </div>
+                                              </div>
+                                            </form>
+                                      </div>
+                                      
+                                    </div>
+                               
+                                  
+                                  </div>
+
+
+                                   <div class="table-responsive">
+                                      <table class="table table-responsive-lg  table-responsive-md tablefont" id="myTable">
+                                        <thead>
+                                          <tr>
+                                              <th scope="col" class="twentypxdown1 " >S.no</th>
+                                            <th scope="col" class="twentypxdown1 " >Name</th>
+                                            <th scope="col" class="twentypxdown1 " >Email</th>
+                                            <th scope="col" class="twentypxdown1 " >Phone Number</th>
+                                            <th scope="col" class="twentypxdown1 " >Company Name</th>
+                                            <th scope="col" class="twentypxdown1 " >Last Updated</th>
+                                            <th scope="col" class="twentypxdown1 " id="myBtn3"><i class="fas fa-user-plus"></i>Add</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="twentypxdown justify-content-between " >
+                                          <tr v-for="(newvendlist,index) in newvendlists[0]">
+                                              <td v-if="id===index + 'newvendor'" class="noborder justify-content-center"  colspan="7">
+                                                              
+
+                                                  <form action="" method="POST" class="cardanimation">
+                                                  <div class="row justify-content-center">
+                                                    <div class="col-md-8 justify-content-center">
+                                                        <div class="form-group">
+                                                          <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                              <span class="input-group-text">
+                                                                <i class="fas fa-user">&nbsp;Name:</i>
+                                                              </span>
+                                                            </div>
+                                                            <input type="text" name="name" class="form-control" v-model="newvendlist.name" placeholder="name">
+                                                          </div>
+                                                        </div>
+                                      
+                                                    
+                                      
+                                                        <div class="form-group " >
+                                                          <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                              <span class="input-group-text">
+                                                                <i class="fas fa-envelope">&nbsp;Mail Id:</i>
+                                                              </span>
+                                                            </div>
+                                                            <input type="text" name="phoneno" class="form-control" placeholder="Mail" v-model="newvendlist.email">
+                                                          </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                          <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                              <span class="input-group-text">
+                                                                <i class="fas fa-phone-volume">&nbsp;Phone No:</i>
+                                                              </span>
+                                                            </div>
+                                                            <input type="text" name="dateofjoin" class="form-control" placeholder="last_update_date" v-model="newvendlist.phone">
+                                                          </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                          <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                              <span class="input-group-text">
+                                                                <i class="fas fa-address-card">&nbsp;Company:</i>
+                                                              </span>
+                                                            </div>
+                                                            <input type="text" name="dateofjoin" class="form-control" placeholder="business name" v-model="newvendlist.business_name">
+                                                          </div>
+                                                        </div>
+                                                       
+                                      
+                                                    </div>
+                                         
+                                                  </div>
+                                             
+                                                  <div class="row ml-2 mt-2 d-flex justify-content-center">
+                                                    <div class="modal-footer ">
+                                                      <button type="button" class="btn btn-link btn-success" v-on:click="newvendorsubmit(newvendlist.id,newvendlist.name,newvendlist.email,newvendlist.phone,newvendlist.business_name,newvendlist.business_contact_no,newvendlist.business_website_url,newvendlist.verification_key,newvendlist.is_phone_verified,newvendlist.legally_authorised,newvendlist.accept_terms_conditions,newvendlist.created_date,newvendlist.last_update_date);">submit</button>
+                                                      <button type="button" class="btn btn-danger btn-link" data-dismiss="modal" v-on:click="modelclose(index + 'newvendor')">Close</button>
+                                                    </div>
+                                      
+                                                  </div>
+                                                  <div class="col-lg-12 d-flex justify-content-center" v-if=" onsubmit=='submitted' ">
+                                                    <p id="fail"  class="btn btn-link btn-success"> submitted successfully...! </p>
+                                                  </div>
+                                                </form>
+
+
+                                                 </td>
+                                                 <td class="noborder " v-if="!(id===index + 'newvendor')"> <p class="btn btn-success btn-raised btn-md tablefont1 indexnumber">{{index+1}}</p> </td>
+                                            <td class="noborder" v-if="!(id===index + 'newvendor')">{{newvendlist.name}}</td>
+                                            <td class="noborder" v-if="!(id===index + 'newvendor')">{{newvendlist.email}}</td>
+                                            <td class="noborder" v-if="!(id===index + 'newvendor')">{{newvendlist.phone}}</td>
+                                            <td class="noborder" v-if="!(id===index + 'newvendor')">{{newvendlist.business_name}}</td>
+                                            <td class="noborder" v-if="!(id===index + 'newvendor')">{{newvendlist.last_update_date}}</td>
+                                            <td class="noborder" class="noborder" v-if="!(id===index + 'newvendor')"><button  data-toggle="modal"  v-on:click="modelopen(index + 'newvendor')"  class="btn btn-success btn-raised btn-md tablefont1 crud">
+                                              <i class="fas fa-edit"></i>
+                                           </button>
+                                         <button data-toggle="modal"  v-on:click="newvendordelete(newvendlist.id)"  class="btn btn-success btn-raised btn-md tablefont1 crud">
+                                          <i class="far fa-trash-alt"></i>
+                                       </button>
+                                           
+                                          </td>   
+                                          </tr>
+
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                    
+
+
+                                    
+                                  </div>
+
+                            </div>
+                        </div> 
+                    </div>
+             
+                </div>
+
+                <div id="transactiondetails" >
+                        <div class="card card-nav-tabs">
+                                <div class="card-header card-header-primary">
+                                  <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                                  <div class="nav-tabs-navigation">
+                                    <div class="nav-tabs-wrapper">
+                                      <ul class="nav nav-tabs" data-tabs="tabs">
+                                        <li class="nav-item">
+                                          <a class="nav-link active" href="#Requests" data-toggle="tab">
+                                            <i class="material-icons">swap_horiz</i> Requests
+              
+                                          </a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#Submitted" data-toggle="tab">
+                                            <i class="material-icons">assignment</i> Submitted
+                                          </a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#Approved" data-toggle="tab">
+                                            <i class="material-icons">done_outline</i> Approved
+                                          </a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="#Cancelled" data-toggle="tab">
+                                            <i class="material-icons">speaker_notes_off</i> Cancelled
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>  <!-- request -->
+                                <div >
+                                  <div class="tab-content text-center">
+                                    <div class="tab-pane active" id="Requests">
+                                          <div >
+                                                  <div class="card-body ">
+                                                      <div class="mdl-grid cardanimation" > 
+                                                          
+                                                          <h4 class="title">REQUESTED</h4> 
+
+                                                          <div class="table-responsive">
+
+                                                          <table class="table table-responsive tablefont" id="myTable4" >
+                                                              <thead>
+                                                                <tr>
+                                                                    <th scope="col" class="twentypxdown1 " >S.no</th>
+                                                                  <th scope="col" class="twentypxdown1 " >name</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movingfrom</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movingto</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movingdistance</th>
+                                                                  <th scope="col" class="twentypxdown1 " >dateofshifting</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movetype</th>
+                                                                  <th scope="col" class="twentypxdown1 " >totalitems</th>
+                                                                  <th scope="col" class="twentypxdown1 " >number</th>
+                                                                 
+                                                                 
+                                                                  <th scope="col" class="twentypxdown1 " ></th>
+                                                                  
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody class="twentypxdown justify-content-between " >
+                                                                  <tr v-for="(list,index) in lists"  >
+                                                                    <td v-if="id===index + 'request'" class="noborder" v-on:click="modelclose(index + 'request')" colspan="9">
+                                                                      
+
+                                                                     ss
+
+
+                                                                    </td>
+                                                                    <td class="noborder " v-if="!(id===index + 'request')"> <p class="btn btn-success btn-raised btn-md tablefont1 indexnumber">{{index+1}}</p> </td>
+                                                                      <td class="noborder" v-if="!(id===index + 'request')">{{list.name}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'request')">{{list.movingfrom}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'request')">{{list.movingto}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'request')">{{list.movingdistance}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'request')">{{list.dateofshifting}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'request')">{{list.movetype}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'request')">{{list.totalitems}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'request')">{{list.number}}</td>
+
+                                                                      <td class="noborder" v-if="!(id===index + 'request')"><button data-toggle="modal"  v-on:click="modelopen(index + 'request')"  class="btn btn-success btn-raised btn-md tablefont1">
+                                                                          Edit
+                                                                     </button></td>
+
+                                                                     
+                                                                      
+                                                                    </tr>
+                                                                   
+                                
+                                                               
+                                                                
+                                                              </tbody>
+                                                            </table>
+
+                                                           </div> 
+
+                                               
+
+
+
+<!--                                                         <div  v-for="(list,index) in lists" v-bind:key="list" v-bind:id="list.name"  class="component" >   
+                                                          <div v-on:click="drop1(index + 1);">              
+                                                          <div class="row d-flex justify-content-center"  >
+                                                            <div class="col-lg-1  indexnumber">
+                                                                <p class="para">{{index + 1 }}</p>
+                                                                
+                                                            </div>
+                                                            <div class="col-lg-3 ">
+                                                                <p class="para">Moving from:<br>{{list.movingto}}</p>
+                                                              
+                                                            </div>
+                                                            <div class="col-lg-3 ">
+                                                                <p class="para">Moving to:<br>{{list.movingto}}</p>
+                                                                
+                                                            </div>
+                                                            <div class="col-lg-2 ">
+                                                                <p class="para">{{list.movingdistance}}</p>
+                                                             
+                                                            </div>
+                                                            <div class="col-lg-1 ">
+                                                                <p class="para">{{list.name}}</p>
+                                                              
+                                                            </div>
+                                                              <div class="col-lg-2">
+                                                                  <button data-toggle="modal"  v-on:click="modelopen(index + 1)"  class="btn btn-success btn-raised btn-md">
+                                                                      Edit
+                                                                  </button>
+                                                                  
+                                                              </div>
+                                                          </div>
+                                                          <br>
+                                                          <div class="row d-flex justify-content-center"  >
+                                                            <div class="col-lg-1 indexnumber1 ">
+                                                              &nbsp;
+                                                          </div>
+                                                          <div class="col-lg-3 ">
+                                                              <p class="para">Date of Shfting:{{list.dateofshifting}}</p>
+                                                            
+                                                          </div>
+                                                          <div class="col-lg-3 ">
+                                                              <p class="para">Moving Type:{{list.movetype}}</p>
+                                                            
+                                                          </div>
+                                                          <div class="col-lg-2 ">
+                                                              <p class="para">Total Items:{{list.totalitems}} </p>
+                                                            
+                                                          </div>
+                                                          <div class="col-lg-1 ">
+                                                              <p class="para">{{list.number}}</p>
+                                                             
+                                                          </div>
+                                                          <div class="col-lg-1 ">
+                                                              &nbsp;
+                                                          </div>
+                                                            </div>
+                                                          </div>
+                                                            <div v-bind:id="index" v-if="cart === index + 1" v-on:click="drop2(index + 1);"  >
+                                                              <div class="card card-body cardanimation">
+                                                                  <div class="row" >
+                                                                      <div class="col-lg-2"  v-for="item in list.items">
+                                                                          <p class="para1">{{item}}</p>
+                                                                      </div>
+                                                                    </div>
+                                                              </div>
+                                                            
+                                                          </div>
+
+
+                                
+
+
+
+
+                                                        
+                                                        </div> -->
+                                                        </div>
+                                                  </div>
+                                                </div>
+              
+                                  </div>
+                                   <!-- request end -->
+              
+                                    <!-- submit -->
+                                    <div class="tab-pane" id="Submitted">
+                                          <div class="">
+                                                  <div class="card-body ">
+                                                      <div class="mdl-grid cardanimation"> 
+                                                          <h4 class="title">SUBMITTED</h4>  
+
+                                                          <div class="table-responsive">
+
+                                                          <table class="table table-responsive-lg  tablefont" id="myTable5" >
+                                                            <thead>
+                                                              <tr>
+                                                                  <th scope="col" class="twentypxdown1 " >S.no</th>
+                                                                <th scope="col" class="twentypxdown1 " >name</th>
+                                                                <th scope="col" class="twentypxdown1 " >movingfrom</th>
+                                                                <th scope="col" class="twentypxdown1 " >movingto</th>
+                                                                <th scope="col" class="twentypxdown1 " >movingdistance</th>
+                                                                <th scope="col" class="twentypxdown1 " >dateofshifting</th>
+                                                                <th scope="col" class="twentypxdown1 " >movetype</th>
+                                                                <th scope="col" class="twentypxdown1 " >totalitems</th>
+                                                                <th scope="col" class="twentypxdown1 " >number</th>
+                                                               
+                                                               
+                                                                <th scope="col" class="twentypxdown1 " ></th>
+                                                                
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody class="twentypxdown justify-content-between " >
+                                                                <tr v-for="(list2,index) in lists2" v-bind:key="list2" v-bind:id="list2.name"   >
+                                                                  <td v-if="id===index + 'submitted'" class="noborder"  colspan="8">
+
+                                                                      <div class="card card-body cardanimation " >
+                                                                            
+                                                                                
+                                                                                    <div class="row d-flex justify-content-center bordercall">
+                                                                                          <div class="col-lg-2">
+                                                                                            <p class="para1 tablehead">Vendor</p>
+                                                                                          </div>
+                                                                                          <div class="col-lg-2 tablehead">
+                                                                                            <p class="para1">Contatc</p>
+                                                                                          </div>
+                                                                                          <div class="col-lg-2 tablehead">
+                                                                                            <p class="para1">Quote</p>
+                                                                                          </div>
+                                                                                          <div class="col-lg-2 tablehead">
+                                                                                            <p class="para1">Send a remainder</p>
+                                                                                          </div>
+                                                                                          <div class="col-lg-3 tablehead">
+                                                                                            <p class="para1">Call</p>
+                                                                                          </div>
+                                                                                        
+                                                                                        </div>
+          
+          
+                                                                                          <div class="row d-flex justify-content-center bordercall" v-for="vendors in list2.vendors2" >
+                                                                                            
+                                                                                            <div class="col-lg-2" v-if="vendors!=''">
+                                                                                              <p class="para1">{{vendors.name}}</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-2" v-if="vendors!=''">
+                                                                                              <p class="para1">{{vendors.contact}}</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-2" v-if="vendors!=''">
+                                                                                              <p class="para1" v-bind:style="[ vendors.quote !=='' ?  {border:'2px solid #4caf50'} : {border:'2px solid #f56058'}]">
+                                                                                                {{ vendors.quote !=='' ?  vendors.quote : "pending"}}
+                                                                                              </p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-2" v-if="vendors!=''">
+                                                                                              <p class="para1" >{{ vendors.quote !=='' ? "Done" : "Remainder"}}</p>
+                                                                                            </div>
+                                                                                            <div class="col-lg-3" v-if="vendors!=''">
+                                                                                              <p class=""><button class="buttonpara"><i class="fas fa-phone-volume"></i> &nbsp; Click to Call</button></p>
+                                                                                            </div>
+                                                                                          
+                                                                                        </div>
+          
+          
+                                                                                       <div class="col-lg-1" style="margin-left: 50px; ">
+
+                                                                              
+                                                                        </div>
+          
+                                                               </td>
+
+
+                                                                  </td>
+                                                                  <td class="noborder " v-if="!(id===index + 'submitted')"> <p class="btn btn-success btn-raised btn-md tablefont1 indexnumber">{{index+1}}</p> </td>
+                                                                    <td class="noborder" v-if="!(id===index + 'submitted')">{{list2.name}}</td>
+                                                                    <td class="noborder" v-if="!(id===index + 'submitted')">{{list2.movingfrom}}</td>
+                                                                    <td class="noborder" v-if="!(id===index + 'submitted')">{{list2.movingto}}</td>
+                                                                    <td class="noborder" v-if="!(id===index + 'submitted')">{{list2.movingdistance}}</td>
+                                                                    <td class="noborder" v-if="!(id===index + 'submitted')">{{list2.dateofshifting}}</td>
+                                                                    <td class="noborder" v-if="!(id===index + 'submitted')">{{list2.movetype}}</td>
+                                                                    <td class="noborder" v-if="!(id===index + 'submitted')">{{list2.totalitems}}</td>
+                                                                    <td class="noborder" v-if="!(id===index + 'submitted')">{{list2.number}}</td>
+
+                                                                    <td class="noborder" >
+                                                                      <button data-toggle="modal" v-if="!(id===index + 'submitted')"  v-on:click="modelopen(index + 'submitted')"  class="btn btn-success btn-raised btn-md tablefont1">
+                                                                       Quotes
+                                                                   </button>
+                                                                   <button data-toggle="modal" v-if="(id===index + 'submitted')"  v-on:click="modelclose(index + 'submitted')"  class="btn  btn-raised btn-md tablefont1" style="background-color: rgb(243, 96, 96)">
+                                                                      close
+                                                                 </button>
+                                                                  </td>
+   
+                                                                  </tr>
+                                                                 
+                              
+                                                             
+                                                              
+                                                            </tbody>
+                                                          </table>
+                                                          </div>
+
+<!-- 
+                                            <table class="table table-responsive-lg  table-responsive-md tablefont ">
+                                     
+                                                <tbody  v-for="(list2,index) in lists2" v-bind:key="list2" v-bind:id="list2.name"  >
+                                                  <tr v-on:click="drop1(index + 1);" >
+                                                    <td class="noborder">{{list2.name}}</td>
+                                                    <td class="noborder">{{list2.name}}</td>
+                                                    <td class="noborder">{{list2.name}}</td>
+                                                    <td class="noborder">{{list2.name}}</td>
+                                                    <td class="noborder">{{list2.name}}</td>
+                                                    
+                                                    <td class="noborder">
+                                                        <div class=" text-center indexnumber">
+                                                                      <p class="para">Requested time </p>
+                                                                      
+                                                                      <p class="para">{{list2.requestedtime2}}</p>
+                                                                      
+                                                                  </div>
+                                                  </td>   
+                                                  </tr>
+                                                  <tr v-on:click="drop1(index + 1);" class="twentypxdown">
+                                                     <td class="noborder">{{list2.name}}</td>
+                                                    <td class="noborder">{{list2.name}}</td>
+                                                    <td class="noborder">{{list2.name}}</td>
+                                                    <td class="noborder">{{list2.name}}</td>
+                                                    <td class="noborder">{{list2.name}}</td>
+                                                    
+                                                    <td class="noborder">&nbsp;</td>
+                                                  </tr>
+                                                  <tr v-bind:id="index" v-if="cart === index + 1" v-on:click="drop2(index + 1);" >
+                                   
+                                                  </tr>
+
+                                             
+                                                 
+                                                  
+                                                </tbody>
+
+                                              </table> -->
+
+
+
+
+
+
+
+  <!--                                                          <div  v-for="(list2,index2) in lists2" v-bind:key="list2" v-bind:id="list2.name"  class="component" >                 
+                                                              <div class="row d-flex justify-content-center" v-on:click="drop12(index2 + 1);" >
+                                                                  <div class="col-lg-10 ">
+                                                                     
+                                                                      <div class="row">
+                                                                          <div class="col-lg-1 indexnumber">
+                                                                              <p class="para">{{list2.name}}</p>
+                                                                              
+                                                                          </div>
+                                                                          <div class="col-lg-3 ">
+                                                                              <p class="para">Moving from:<br>{{list2.movingfrom2}}</p>
+                                                                            
+                                                                          </div>
+                                                                          <div class="col-lg-3">
+                                                                              <p class="para">Moving to:<br>{{list2.movingto}}</p>
+                                                                              
+                                                                          </div>
+                                                                          <div class="col-lg-3">
+                                                                              <p class="para">{{list2.movingdistance2}}</p>
+                                                                           
+                                                                          </div>
+                                                                          <div class="col-lg-2">
+                                                                              <p class="para text-center">{{list2.name}}</p>
+                                                                            
+                                                                          </div>
+              
+                                                                      </div>
+              
+                                                                      <br>
+              
+                                                                          <div class="row d-flex justify-content-center"  >
+                                                                              <div class="col-lg-1 indexnumber1">
+                                                                                &nbsp;
+                                                                            </div>
+                                                                            <div class="col-lg-3 ">
+                                                                                <p class="para">Date of Shfting: {{list2.dateofshifting2}}</p>
+                                                                              
+                                                                            </div>
+                                                                            <div class="col-lg-3">
+                                                                                <p class="para">Moving Type{{list2.movingtype2}}</p>
+                                                                              
+                                                                            </div>
+                                                                            <div class="col-lg-3">
+                                                                                <p class="para">Total Items{{list2.totalitems2}}</p>
+                                                                              
+                                                                            </div>
+                                                                            <div class="col-lg-2">
+                                                                                <p class="para">{{list2.number2}}</p>
+                                                                              
+                                                                            </div>
+                                                                           
+                                                                         </div>
+                                                                      
+              
+              
+                                                                      
+                                                                  </div>
+                                                                 
+                                                                  <div class="col-lg-1 text-center indexnumber">
+                                                                      <p class="para">Requested </p>
+                                                                      <p class="para"> Time:</p>
+                                                                      <p class="para">{{list2.requestedtime2}}</p>
+                                                                      
+                                                                  </div>
+                                                                </div>
+                                                                <br>
+                                                     
+                                                                  <div v-bind:id="index2" v-if="cart2 === index2 + 1" v-on:click="drop22(index2 + 1);"  >
+                                                                    <div class="card card-body cardanimation" >
+                                                                        <div class="row d-flex justify-content-center" >
+                                                                      
+                                                                          <div class="col-lg-10">
+                                                                              <div class="row d-flex justify-content-center " >
+                                                                                <div class="col-lg-2">
+                                                                                  <p class="para1 tablehead">Vendor</p>
+                                                                                </div>
+                                                                                <div class="col-lg-2 tablehead">
+                                                                                  <p class="para1">Contatc</p>
+                                                                                </div>
+                                                                                <div class="col-lg-2 tablehead">
+                                                                                  <p class="para1">Quote</p>
+                                                                                </div>
+                                                                                <div class="col-lg-2 tablehead">
+                                                                                  <p class="para1">Send a remainder</p>
+                                                                                </div>
+                                                                                <div class="col-lg-3 tablehead">
+                                                                                  <p class="para1">Call</p>
+                                                                                </div>
+                                                                              </div>
+              
+                                                                              <div class="col-lg-12 text-center" v-if="list2.vendors2==''" >
+              
+                                                                                <h1>No Nearest Vendors Founded Yet </h1>
+              
+                                                                              </div>
+              
+                                                                              <div class="row d-flex justify-content-center bordercall" v-for="vendors in list2.vendors2" >
+                                                                                  
+                                                                                  <div class="col-lg-2" v-if="vendors!=''">
+                                                                                    <p class="para1">{{vendors.name}}</p>
+                                                                                  </div>
+                                                                                  <div class="col-lg-2" v-if="vendors!=''">
+                                                                                    <p class="para1">{{vendors.contact}}</p>
+                                                                                  </div>
+                                                                                  <div class="col-lg-2" v-if="vendors!=''">
+                                                                                    <p class="para1" v-bind:style="[ vendors.quote !=='' ?  {border:'2px solid #4caf50'} : {border:'2px solid #f56058'}]">
+                                                                                      {{ vendors.quote !=='' ?  vendors.quote : "pending"}}
+                                                                                    </p>
+                                                                                  </div>
+                                                                                  <div class="col-lg-2" v-if="vendors!=''">
+                                                                                    <p class="para1" >{{ vendors.quote !=='' ? "Done" : "Remainder"}}</p>
+                                                                                  </div>
+                                                                                  <div class="col-lg-3" v-if="vendors!=''">
+                                                                                    <p class=""><button class="buttonpara"><i class="fas fa-phone-volume"></i> &nbsp; Click to Call</button></p>
+                                                                                  </div>
+                                                                                
+                                                                              </div>
+                                                                          </div>
+                                                                          <div class="col-lg-1" style="margin-left: 50px; ">
+                                                                            <div class="row">
+                                                                                <div class="col-lg-12 text-center indexnumber tablehead">
+                                                                                    <p class="para1">Submitted </p>
+                                                                                    <p class="para1"> Time:</p>
+                                                                                    <p class="para1">4pm</p>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+              
+                                                                            <br>
+              
+                                                                            <div class="row">
+                                                                                <div class="col-lg-12 text-center indexnumber tablehead">
+                                                                                    <p class="para1">Closed By:</p>
+                                                                                    
+                                                                                    <p class="para1">4pm</p>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                          </div>
+                                                                           
+                                                                          </div>
+                                                                    </div>
+                                                                  
+                                                                </div>
+                                                        </div> -->
+                                                      </div>
+                                                  </div>
+                                                </div>      
+                                             </div>
+                                     <!-- submit end -->
+              
+                                      <!-- approved -->
+              
+                                    <div class="tab-pane" id="Approved">
+                                          <div class="">
+                                                  <div class="card-body ">
+                                                      <div class="mdl-grid cardanimation"> 
+                                                          <h4 class="title">APPROVED</h4>  
+
+
+                                                          <div class="table-responsive">
+                                                          <table class="table table-responsive-lg  tablefont" id="myTable6" >
+                                                              <thead>
+                                                                <tr>
+                                                                    <th scope="col" class="twentypxdown1 " >S.no</th>
+                                                                  <th scope="col" class="twentypxdown1 " >name</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movingfrom</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movingto</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movingdistance</th>
+                                                                  <th scope="col" class="twentypxdown1 " >dateofshifting</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movetype</th>
+                                                                  <th scope="col" class="twentypxdown1 " >totalitems</th>
+                                                                  <th scope="col" class="twentypxdown1 " >number</th>
+                                                                 
+                                                                 
+                                                                 
+                                                                  
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody class="twentypxdown justify-content-between " >
+                                                                  <tr v-for="(list3,index) in lists3" v-bind:key="list3" v-bind:id="list3.name"  >
+                                                                      <td class="noborder " v-if="!(id===index + 'approved')"> <p class="btn btn-success btn-raised btn-md tablefont1 indexnumber">{{index+1}}</p> </td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list3.name}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list3.movingfrom}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list3.movingto}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list3.movingdistance}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list3.dateofshifting}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list3.movetype}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list3.totalitems}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list3.number}}</td>
+
+                                                                  
+
+                                                                     
+                                                                      
+                                                                    </tr>
+
+                                                              </tbody>
+                                                            </table>
+                                                          </div>
+
+                                                           <!-- <table class="table table-responsive-lg  table-responsive-md tablefont ">
+                                     
+                                                <tbody  v-for="(list3,index) in lists3" v-bind:key="list3" v-bind:id="list3.name"  >
+                                                  <tr >
+                                                    <td class="noborder">{{list3.totalitems3}}</td>
+                                                    <td class="noborder">{{list3.dateofshifting3}}</td>
+                                                    <td class="noborder">{{list3.totalitems3}}</td>
+                                                    <td class="noborder">{{list3.totalitems3}}</td>
+                                                    <td class="noborder">{{list3.totalitems3}}</td>
+                                                    <td class="noborder">{{list3.totalitems3}}</td>
+                                                    <td class="noborder">
+                                                      ss
+                                                  </td>   
+                                                  </tr>
+                                                  <tr>
+                                                     <td class="twentypxdown">{{list3.name}}</td>
+                                                    <td class="twentypxdown">{{list3.totalitems3}}</td>
+                                                    <td class="twentypxdown">{{list3.totalitems3}}</td>
+                                                    <td class="twentypxdown">{{list3.totalitems3}}</td>
+                                                    <td class="twentypxdown">{{list3.totalitems3}}</td>
+                                                    <td class="twentypxdown">{{list3.totalitems3}}</td>
+                                                    <td class="twentypxdown">&nbsp;</td>
+                                                  </tr>
+                                            </tbody>
+
+                                          </table> -->
+
+
+
+                          <!--                                 <div  v-for="(list3,index3) in lists3" v-bind:key="list3" v-bind:id="list3.name"  class="component" >                 
+                                                              <div class="row">
+                                                                  <div class="col-lg-8">
+              
+                                                                      <div class="row d-flex justify-content-center">
+                                                                          
+                                                                              <div class="col-lg-1 indexnumber">
+                                                                                  <p class="para">{{list3.dateofshifting3}}</p>
+                                                                                  
+                                                                              </div>
+                                                                              <div class="col-lg-4 ">
+                                                                                  <p class="para">Moving from:<br>{{list3.movingfrom3}}</p>
+                                                                                
+                                                                              </div>
+                                                                              <div class="col-lg-4">
+                                                                                  <p class="para">Moving to:<br>{{list3.movingto3}}</p>
+                                                                                  
+                                                                              </div>
+                                                                              <div class="col-lg-2">
+                                                                                  <p class="para">{{list3.movingdistance3}}</p>
+                                                                               
+                                                                              </div>
+                
+                                                                      </div>
+              
+                                                                      <div class="row d-flex justify-content-center"  >
+                                                                          <div class="col-lg-1 indexnumber1">
+                                                                            &nbsp;
+                                                                        </div>
+                                                                        <div class="col-lg-4 ">
+                                                                            <p class="para">Date of Shfting:{{list3.dateofshifting3}}</p>
+                                                                          
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                            <p class="para">Moving Type:{{list3.movetype3}}</p>
+                                                                          
+                                                                        </div>
+                                                                        <div class="col-lg-2">
+                                                                            <p class="para">Total Items:{{list3.totalitems3}}</p>
+                                                                          
+                                                                        </div>
+                                                                      
+                                                                       
+                                                                     </div>
+              
+                                                                  </div>
+                                                                  <div class="col-lg-4">
+                                                                      <div class="row">
+                                                                          <div class="col-lg-8 companymargin">
+                                                                              <p class="paracompany">{{list3.companyconformedfor3}}
+                                                                                <br> <br>
+                                                                              {{list3.numberofcompany3}}
+                                                                              </p>
+                                                                          </div>
+                                                                          <div class="col-lg-4 indexnumber">
+                                                                              
+                                                                              <p class="para">Rupees: <br> {{list3.amount3}}
+                                                                                
+                                                                              </p>
+                                                                          </div>
+              
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div> -->
+                                                    </div>    
+                                                  </div>
+                                                  </div>
+                                                </div>
+                                    <!-- approved End -->
+                                   <!-- Cancelled -->
+                                    <div class="tab-pane" id="Cancelled">
+                                          <div class="">
+                                                  <div class="card-body ">
+                                                      <div class="mdl-grid cardanimation"> 
+                                                          <h4 class="title">CANCELLED</h4>  
+
+                                                          <div class="table-responsive">
+                                                          <table class="table table-responsive-lg  tablefont" id="myTable7" >
+                                                              <thead>
+                                                                <tr>
+                                                                    <th scope="col" class="twentypxdown1 " >S.no</th>
+                                                                  <th scope="col" class="twentypxdown1 " >name</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movingfrom</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movingto</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movingdistance</th>
+                                                                  <th scope="col" class="twentypxdown1 " >dateofshifting</th>
+                                                                  <th scope="col" class="twentypxdown1 " >movetype</th>
+                                                                  <th scope="col" class="twentypxdown1 " >totalitems</th>
+                                                                  <th scope="col" class="twentypxdown1 " >number</th>
+                                                                 
+                                                                 
+                                                                 
+                                                                  
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody class="twentypxdown justify-content-between " >
+                                                                  <tr v-for="(list4,index) in lists4" v-bind:key="list4" v-bind:id="list4.name"  >
+                                                                      <td class="noborder " v-if="!(id===index + 'approved')"> <p class="btn btn-success btn-raised btn-md tablefont1 indexnumber">{{index+1}}</p> </td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list4.name}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list4.movingfrom}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list4.movingto}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list4.movingdistance}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list4.dateofshifting}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list4.movetype}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list4.totalitems}}</td>
+                                                                      <td class="noborder" v-if="!(id===index + 'approved')">{{list4.number}}</td>
+
+                                                                  
+
+                                                                     
+                                                                      
+                                                                    </tr>
+
+                                                              </tbody>
+                                                            </table>
+                                                          </div>
+
+
+                                                           <!-- <table class="table table-responsive-lg  table-responsive-md tablefont ">
+                                     
+                                                <tbody v-for="(list4,index) in lists4" v-bind:key="list4" v-bind:id="list4.name"  >
+                                                  <tr  >
+                                                    <td class="noborder">{{list4.totalitems4}}</td>
+                                                    <td class="noborder">{{list4.dateofshifting4}}</td>
+                                                    <td class="noborder">{{list4.totalitems4}}</td>
+                                                    <td class="noborder">{{list4.totalitems4}}</td>
+                                                    <td class="noborder">{{list4.totalitems4}}</td>
+                                                    <td class="noborder">{{list4.totalitems4}}</td>
+                                                    <td class="noborder">
+                                                      ss
+                                                  </td>   
+                                                  </tr>
+                                                  <tr>
+                                                     <td class="twentypxdown">{{list4.name}}</td>
+                                                    <td class="twentypxdown">{{list4.totalitems4}}</td>
+                                                    <td class="twentypxdown">{{list4.totalitems4}}</td>
+                                                    <td class="twentypxdown">{{list4.totalitems4}}</td>
+                                                    <td class="twentypxdown">{{list4.totalitems4}}</td>
+                                                    <td class="twentypxdown">{{list4.totalitems4}}</td>
+                                                    <td class="twentypxdown">&nbsp;</td>
+                                                  </tr>
+                                            </tbody>
+
+                                          </table> -->
+
+
+
+
+                                <!--                           <div  v-for="(list4,index4) in lists4" v-bind:key="list4" v-bind:id="list4.name"  class="component" >                 
+                                                              <div class="row d-flex justify-content-center"  >
+                                                                  <div class="col-lg-10 ">
+                                                                      <p class="para">{{index2 + 1}}</p>
+                                                                      <div class="row">
+                                                                          <div class="col-lg-1 indexnumber">
+                                                                              <p class="para">{{index4 + 1}}</p>
+                                                                              
+                                                                          </div>
+                                                                          <div class="col-lg-4 ">
+                                                                              <p class="para">Moving from:{{list4.movingfrom4}}<br></p>
+                                                                            
+                                                                          </div>
+                                                                          <div class="col-lg-4">
+                                                                              <p class="para">Moving to:<br>{{list4.movingto4}}</p>
+                                                                              
+                                                                          </div>
+                                                                          <div class="col-lg-3">
+                                                                              <p class="para">{{list4.movingdistance4}}</p>
+                                                                           
+                                                                          </div>
+                                                                         
+              
+                                                                      </div>
+              
+                                                                      <br>
+              
+                                                                          <div class="row d-flex justify-content-center"  >
+                                                                              <div class="col-lg-1 indexnumber1">
+                                                                                &nbsp;
+                                                                            </div>
+                                                                            <div class="col-lg-4 ">
+                                                                                <p class="para">Date of Shfting:{{list4.dateofshifting4}}</p>
+                                                                              
+                                                                            </div>
+                                                                            <div class="col-lg-4">
+                                                                                <p class="para">Moving Type{{list4.movingtype4}}</p>
+                                                                              
+                                                                            </div>
+                                                                            <div class="col-lg-3">
+                                                                                <p class="para">Total Items:{{list4.totalitems4}}</p>
+                                                                              
+                                                                            </div>
+                                                                           
+                                                                           
+                                                                         </div>
+                                                                      
+              
+              
+                                                                      
+                                                                  </div>
+                                                                 
+                                                                  <div class="col-lg-1 text-center indexnumber">
+                                                                      <p class="para">Cancelled </p>
+                                                                      <p class="para"> On</p>
+                                                                      <p class="para">{{list4.Cancelledon4}}</p>
+                                                                      
+                                                                  </div>
+                                                                </div>
+                                                                <br>
+                                                   
+                                       
+                                                            </div> -->
+                                                </div>
+                                     </div>
+                                  </div>
+                                  <!-- Cancelled end -->
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- End Tabs with icons on Card -->
+                            </div>
+                </div>
+
+        </div>
+
+
+
+
+
+
+  
+
+
+    
+<!-- -======================================== wigids section End ======================================================== -->
+
+
+  <!--   Core JS Files   -->
+  <script src="./assets/Vue.js"></script>
+  <script src="./assets/vue2.js"></script>
+
+  <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+  <script src="assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <script src="assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+  <script src="assets/js/material-kit.js?v=2.0.5" type="text/javascript"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+<script>
+
+  setTimeout(()=>{
+    $(document).ready(function(){
+        $('#myTable').dataTable(
+          {
+        "lengthMenu": [[6,7,8,9,10,15,25,50,-1], [6,7,8,9,10,15,25,50, "All"]]
+        }
+        );
+    });
+
+  },3000);
+
+  setTimeout(()=>{
+    $(document).ready(function(){
+        $('#myTable1').dataTable(
+          {
+        "lengthMenu": [[6,7,8,9,10,15,25,50,-1], [6,7,8,9,10,15,25,50, "All"]]
+        }
+        );
+    });
+
+  },3000);
+
+  setTimeout(()=>{
+    $(document).ready(function(){
+        $('#myTable2').dataTable(
+          {
+        "lengthMenu": [[6,7,8,9,10,15,25,50,-1], [6,7,8,9,10,15,25,50, "All"]]
+        }
+        );
+    });
+
+  },3000);
+
+  setTimeout(()=>{
+    $(document).ready(function(){
+        $('#myTable3').dataTable(
+          {
+        "lengthMenu": [[6,7,8,9,10,15,25,50,-1], [6,7,8,9,10,15,25,50, "All"]]
+        }
+        );
+    });
+
+  },3000);
+
+  setTimeout(()=>{
+    $(document).ready(function(){
+        $('#myTable4').dataTable(
+          {
+        "lengthMenu": [[6,7,8,9,10,15,25,50,-1], [6,7,8,9,10,15,25,50, "All"]]
+        }
+        );
+    });
+
+  },3000);
+
+  setTimeout(()=>{
+    $(document).ready(function(){
+        $('#myTable5').dataTable(
+          {
+        "lengthMenu": [[6,7,8,9,10,15,25,50,-1], [6,7,8,9,10,15,25,50, "All"]]
+        }
+        );
+    });
+
+  },3000);
+
+  setTimeout(()=>{
+    $(document).ready(function(){
+        $('#myTable6').dataTable(
+          {
+        "lengthMenu": [[6,7,8,9,10,15,25,50,-1], [6,7,8,9,10,15,25,50, "All"]]
+        }
+        );
+    });
+
+  },3000);
+
+  setTimeout(()=>{
+    $(document).ready(function(){
+        $('#myTable7').dataTable(
+          {
+        "lengthMenu": [[6,7,8,9,10,15,25,50,-1], [6,7,8,9,10,15,25,50, "All"]]
+        }
+        );
+    });
+
+  },3000);
+
+  setTimeout(()=>{
+    $(document).ready(function(){
+        $('#myTable8').dataTable(
+          {
+        "lengthMenu": [[6,7,8,9,10,15,25,50,-1], [6,7,8,9,10,15,25,50, "All"]]
+        }
+        );
+    });
+
+  },3000);
+   
+    </script>
+
+
+  
+</body>
+</html>
